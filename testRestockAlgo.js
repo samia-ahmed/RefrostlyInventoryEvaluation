@@ -83,7 +83,7 @@ function buildInventory(jsn1,jsn2) {
 
 // FUNCTION CALLS
 buildInventory(orders, restocks);
-buildInventory(orders, restocks2);
+// buildInventory(orders, restocks2);
 // console.log(buildInventory(orders, restocks));
 // console.log(buildInventory(orders, restocks2));
 
