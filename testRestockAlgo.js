@@ -3,13 +3,14 @@ var orders = require('./orders.json');
 var restocks = require('./restocks.json');
 var restocks2 = require('./restocks2.json');
 
-// FUNCTIONS
+// FUNCTION DESCRIPTIONS
 // 1 - sortJson: sort the order and restock jsons (arrays), output sorted jsons
 // 2 - buildInventory: iterate over sorted jsons and build inventory as we go(object), output success and remaining inventory or out of stock and any order item/date we ran out on
 
 // RUNTIME
 // O(n + m)
 
+// FUNCTIONS
 // 1 - sort order and restock jsons by date
 function sortJson(jsn1, jsn2) {
     jsn1.sort(function(a,b){
@@ -23,6 +24,7 @@ function sortJson(jsn1, jsn2) {
 // 2 - build and assess inventory
 // Given the two sorted jsons, assess each order/restock object by date (earliest event to most recent event) and compile a running inventory
 function buildInventory(jsn1,jsn2) {
+    // call function to order each json file
     sortJson(jsn1,jsn2);
     var inventory = {};
     var itemsOutOfStock = {};
@@ -69,7 +71,6 @@ function buildInventory(jsn1,jsn2) {
         restockIdx++;
         var runner2 = jsn2[restockIdx];
     }
-
     // check inventory status and return accordingly
     if (outofStock == false) {
         console.log('Success!', inventory);
@@ -81,10 +82,8 @@ function buildInventory(jsn1,jsn2) {
 }
 
 // FUNCTION CALLS
-
 buildInventory(orders, restocks);
 buildInventory(orders, restocks2);
-
 // console.log(buildInventory(orders, restocks));
 // console.log(buildInventory(orders, restocks2));
 
