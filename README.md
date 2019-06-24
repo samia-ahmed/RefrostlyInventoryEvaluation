@@ -5,7 +5,7 @@ REQUIREMENTS
 
 I wrote my solution in javascript and ran it using the runtime environment Node.js. In order to this application using Node.js, the terminal command is: node testRestockAlgo.js
 
-Link to download Node.js from the web: https://nodejs.org/en/download/ || Link to install Node.js using package manager: nodejs.org/en/download/package-manager/ 
+Link to download Node.js from the web: https://nodejs.org/en/download/ || Link to install Node.js using package manager: https://nodejs.org/en/download/package-manager/
 
 APPLICATION LOGIC
 
