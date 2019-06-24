@@ -52,8 +52,8 @@ function createEventList(jsn1,jsn2) {
         restockIdx++;
         var runner2 = jsn2[restockIdx];
     }
-    // call function to build and assess inventory
-    buildInventory(events);
+    // call function to sort jsons
+    sortJson(jsn1, jsn2);
 }
 
 // 3 - create inventory object
